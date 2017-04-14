@@ -1,5 +1,6 @@
 //1016.部分A+B
 //4月6日
+//完美通过
 #include <iostream>
 #include <string>
 
@@ -34,6 +35,9 @@ long getPi(const string & A, char DA) {
     string PA = "";
     for (int i = 0; i < PAcount; i++) {
         PA += DA;
+    }
+    if (PA == "") {
+        return 0L;
     }
     long PAi = stoi(PA);
     return PAi;
