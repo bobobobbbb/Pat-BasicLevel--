@@ -6,6 +6,7 @@ def find_key(dictID, value):
             return i
     return None
 
+
 line1_str = input()
 line1_lst = line1_str.split()
 moonCakeKind = int(line1_lst[0])
@@ -36,6 +37,7 @@ CurrentRequirTon = MarketRequirTon
 while CurrentRequirTon > 0:
     maxUnitPrice = max(UnitPrice_lst)
     UnitPrice_lst.pop(UnitPrice_lst.index(maxUnitPrice))
+
     if maxTon >= CurrentRequirTon:
         CurrentRequirTon * 
 
