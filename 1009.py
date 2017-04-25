@@ -1,6 +1,7 @@
 #python 3
 #Pat乙级真题 
 #1009.1019数字黑洞
+#14/20
 
 def getProgressiveNumberStr(a_str):
     rel_str = ''
@@ -28,13 +29,17 @@ def getResultStr(Inc_str, Dec_str):
     return result_str
 
 InputNum = input()
-increase_str = getProgressiveNumberStr(InputNum)
-decrease_str = getDecreaseNumberStr(InputNum)
-while InputNum != '6174':
-    result_str = getResultStr(increase_str, decrease_str)
-    print(increase_str, ' - ', decrease_str, ' = ', result_str)
-    increase_str = getProgressiveNumberStr(result_str)
-    decrease_str = getDecreaseNumberStr(result_str)
-    if result_str == '6174':
-        break
+if InputNum == InputNum[0] * 4:
+    print(InputNum + ' - ' + InputNum + ' = 0000')
+else:    
+    increase_str = getProgressiveNumberStr(InputNum)
+    decrease_str = getDecreaseNumberStr(InputNum)
+
+    while True:
+        result_str = getResultStr(increase_str, decrease_str)
+        print(increase_str + ' - ' + decrease_str + ' = ' + result_str)
+        increase_str = getProgressiveNumberStr(result_str)
+        decrease_str = getDecreaseNumberStr(result_str)
+        if result_str == '6174':
+            break
 
