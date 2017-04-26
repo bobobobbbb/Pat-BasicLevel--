@@ -1,6 +1,6 @@
 #python3 
 #1020.完美数列
-
+#测试通过
 p = int(input().split()[1])
 num_lst = input().split()
 for index in range(len(num_lst)):
